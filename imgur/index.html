@@ -29,6 +29,7 @@
             padding:1em;
             position:fixed;
         }
+       
         .newPost{
                 text-align: center;
                 height: 35px;
@@ -242,16 +243,77 @@
             color:silver;
             margin-right: 0.5em;
         }
-        #prod{
-            background-color: #51535a;
+        #mDiv{
             width:100%;
-            height: 1500px;
+            background-color:#2e3035 ;
+            display: grid;
+            grid-template-columns: repeat(4,24%);
+            grid-gap:1%;
+        }
+        #prod{
+            width:90%;
+            margin-left: 5%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #prod div img{
+            border-radius: 10px;
+        }
+        #prod p{
+            text-align: center;
+            color:white;
+        }
+        #prod1 div img{
+        border-radius: 10px;
+        }
+        #prod div:hover{
+            transform:translateY(-0.4em);
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+         #prod1 div:hover{
+            transform:translateY(-0.4em);
+            transition: all 0.5s;
+            cursor: pointer;
+         } 
+         #prod2  div:hover{
+            transform:translateY(-0.4em);
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+         #prod3 div:hover{
+             transform:translateY(-0.4em);
+             transition: all 0.5s;
+             cursor: pointer;
+
+         }
+        #prod1 p{
+        text-align: center;
+        color:white;
+        }
+        #prod2 div img{
+        border-radius: 10px;
+        }
+        #prod2 p{
+        text-align: center;
+        color:white;
+        }
+        #prod3 div img{
+        border-radius: 10px;
+        }
+        #prod3 p{
+        text-align: center;
+        color:white;
         }
         .postsColor{
             color:rgb(88, 86, 86);
         }
         .catTitle{
             color:white;
+        }
+        .imgGif{
+            width:100%
         }
     </style>
 </head>
@@ -414,8 +476,20 @@
     </div>
 
 </div>
-<div id="prod">
+<div id="mDiv">
 
+    <div id="prod">
+    
+    </div>
+    <div id="prod1">
+
+    </div>
+    <div id="prod2">
+
+    </div>
+        <div id="prod3">
+
+        </div>
 </div>
     
 </body>
@@ -436,17 +510,55 @@
     
 
     let parent = document.getElementById('prod');
+    let parent1 = document.getElementById('prod1');
+    let parent2 = document.getElementById('prod2');
+    let parent3 = document.getElementById('prod3');
     function showProd(data)
     {
         console.log("data",data)
-        data.forEach((product)=>{
+        let data1=data.slice(0,15);
+        let data2=data.slice(15,30);
+        let data3=data.slice(30,45);
+        let data4=data.slice(45,60);
+        data1.forEach((product)=>{
             let div= document.createElement('div');
             let img = document.createElement('img');
+            img.setAttribute('class','imgGif')
             img.src=product.link;
             let titl=document.createElement('p');
             titl.textContent=product.title;
             div.append(img,titl);
             parent.append(div);
+        })
+        data2.forEach((product)=>{
+        let div= document.createElement('div');
+        let img = document.createElement('img');
+        img.setAttribute('class','imgGif')
+        img.src=product.link;
+        let titl=document.createElement('p');
+        titl.textContent=product.title;
+        div.append(img,titl);
+        parent1.append(div);
+        })
+        data3.forEach((product)=>{
+        let div= document.createElement('div');
+        let img = document.createElement('img');
+        img.setAttribute('class','imgGif')
+        img.src=product.link;
+        let titl=document.createElement('p');
+        titl.textContent=product.title;
+        div.append(img,titl);
+        parent2.append(div);
+        })
+        data4.forEach((product)=>{
+        let div= document.createElement('div');
+        let img = document.createElement('img');
+        img.setAttribute('class','imgGif')
+        img.src=product.link;
+        let titl=document.createElement('p');
+        titl.textContent=product.title;
+        div.append(img,titl);
+        parent3.append(div);
         })
     }
 </script>

@@ -17,14 +17,17 @@
         {
             background:url(https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png);
             height:500px;
+            position:sticky;
         }
         .homeCover{
+            width: 100%;
             display: flex;
             flex-direction: row;
             /* background:url(https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png); */
-            background-size: cover;
-            background-position: 50%;
+            /* background-size: cover; */
+            /* background-position: 50%; */
             padding:1em;
+            position:fixed;
         }
         .newPost{
                 text-align: center;
@@ -155,6 +158,9 @@
            font-size: 1em;
            
        }
+       .exploretags:hover{
+           cursor: pointer;
+       }
        .catGrids{
            display: flex;
            justify-content: space-between;
@@ -170,14 +176,16 @@
         width: 100%;
         font-weight: bold;
         text-align: center;
-        color: #fff;
+        /* color: #fff; */
        }
+     
        .hydra
        {
         background-color: rgb(64, 112, 181);
        }
        .oddly {
            background-color: rgb(94, 88, 203);
+
        }
         .coffe {
         background-color: rgb(56, 60, 100);;
@@ -199,6 +207,7 @@
         }
         .aww{
             background-color: rgb(96, 174, 187);
+
         }
         .oc{
         background-color:rgb(171, 128, 184);
@@ -211,13 +220,39 @@
         }
         .art{
         background-color: rgb(255, 81, 186);
+        
         }
-
-
-
-
-
-
+        .catGrids div{
+            border-radius: 10px;
+        }
+        .catGrids div:hover{
+            transform:translateY(-0.4em);
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+        .tagsExplore{
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+        .tagsExplore:hover{
+            cursor: pointer;
+        }
+        .moretags{
+            text-align: right;
+            color:silver;
+            margin-right: 0.5em;
+        }
+        #prod{
+            background-color: #51535a;
+            width:100%;
+            height: 1500px;
+        }
+        .postsColor{
+            color:rgb(88, 86, 86);
+        }
+        .catTitle{
+            color:white;
+        }
     </style>
 </head>
 <body>
@@ -280,82 +315,135 @@
                 <button>Sign Up</button>
             </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <h1 class="fontmessage">Life is ten percent what happens to you and ninety percent memes.</h1>
     </div>
-    
+    <div>
+        
+        <br>
+        <br>
+    </div>
     <div class="categories">
-        <p class="exploretags">EXPLORE TAGS</p>
+        <div class="tagsExplore">
+            <p class="exploretags">EXPLORE TAGS</p>
+            <p class="moretags"> + MORE TAGS</p>
+        </div>
         <div class="catGrids">
-            <div>
-                <img src="https://via.placeholder.com/232x65.png" width="100%" alt='cat1'>
-                <p class="hydra">Hydraulic Press</p>
+            <div class="hydra">
+                <img src="Images/1.jpg" width="100%" alt='cat1'>
+                <p class='catTitle'>Hydraulic Press</p>
+                <p class="postsColor">Featured • 267 Posts</p>
             </div>
-            <div>
-                <img src="https://via.placeholder.com/110x65.png" width="100%" alt='cat1'>
-                <p class="oddly">Oddly Satisfying</p>
+            <div class="oddly">
+                <img src="Images/2.jpg" width="100%" alt='cat1'>
+                <p class='catTitle' >Oddly Satisfying</p>
+                <p class="postsColor"> 6,540 Posts</p>
 
             </div>
-            <div>
-                <img src="https://via.placeholder.com/110x65.png" width="100%" alt='cat1'>
-                <p class="coffee">Coffee</p>
-
+            <div class="coffee">
+                <img src="Images/3.jpg" width="100%" alt='cat1'>
+                <p class='catTitle' >Coffee</p>
+                <p class="postsColor"> 9,152 Posts</p>
             </div>
-            <div>
-                <img src="https://via.placeholder.com/110x65.png" width="100%" alt='cat1'>
-                <p class="staff">Staff Picks</p>
-
+            <div class="staff">
+                <img src="Images/4.jpg" width="100%" alt='cat1'>
+                <p class='catTitle' >Staff Picks</p>
+                <p class="postsColor"> 6,520 Posts</p>
             </div>
            
-            <div>
-                <img src="https://via.placeholder.com/110x65.png" width="100%" alt='cat1'>
-                <p class="gaming">Gaming</p>
+            <div class="gaming">
+                <img src="Images//5.png" width="100%" alt='cat1'>
+                <p class='catTitle' >Gaming</p>
+                <p class="postsColor"> 297,513 Posts</p>
+            </div>
+            <div class="memes">
+                <img src="Images/6.jpg" width="100%" alt='cat1'>
+                <p class='catTitle' >Memes</p>
+                <p class="postsColor"> 566,932 Posts</p>
 
             </div>
-            <div>
-                <img src="https://via.placeholder.com/110x65.png" width="100%" alt='cat1'>
-                <p class="memes">Memes</p>
+            <div class="clean">
+                <img src="Images/7.jpg" width="100%" alt='cat1'>
+                <p class='catTitle' >Clean Your Desk</p>
+                <p class="postsColor"> 529 Posts</p>
+
+            </div>
+            <div class="funny">
+                <img src="Images/8.png" width="100%" alt='cat1'>
+                <p >Funny</p>
+                <p class="postsColor"> 2,696,266 Posts</p>
+
+            </div>
+            <div class="aww">
+                <img src="Images/9.png" width="100%" alt='cat1'>
+                <p class='catTitle' >Aww</p>
+                <p class="postsColor"> 763,392 Posts</p>
+            </div>
+            <div class="oc">
+                <img src="Images/10.jpg" width="100%" alt='cat1'>
+                <p class='catTitle' >Oc</p>
+                <p class="postsColor"> 39,123 Posts</p>
+
+            </div>
+            <div class="awesome">
+                <img src="Images/11.png" width="100%" alt='cat1'>
+                <p class='catTitle' >Awesome</p>
+                <p class="postsColor"> 751,077 Posts</p>
+
+            </div>
+            <div class="spicy">
+                <img src="Images/12.png" width="100%" alt='cat1'>
+                <p class='catTitle' >SpicyFood</p>
+                <p class="postsColor"> 178 Posts</p>
 
 
             </div>
-            <div>
-                <img src="https://via.placeholder.com/110x65.png" width="100%" alt='cat1'>
-                <p class="clean">Clean Your Desk</p>
-
-            </div>
-            <div>
-                <img src="https://via.placeholder.com/110x65.png" width="100%" alt='cat1'>
-                <p class="funny">Funny</p>
-
-            </div>
-            <div>
-                <img src="https://via.placeholder.com/110x65.png" width="100%" alt='cat1'>
-                <p class="aww">Aww</p>
-
-            </div>
-            <div>
-                <img src="https://via.placeholder.com/110x65.png" width="100%" alt='cat1'>
-                <p class="oc">Oc</p>
-
-            </div>
-            <div>
-                <img src="https://via.placeholder.com/110x65.png" width="100%" alt='cat1'>
-                <p class="awesome">Awesome</p>
-
-            </div>
-            <div>
-                <img src="https://via.placeholder.com/110x65.png" width="100%" alt='cat1'>
-                <p class="spicy">SpicyFood</p>
-
-            </div>
-             <div>
-                 <img src="https://via.placeholder.com/110x65.png" width="100%" alt='cat1'>
-                 <p class="art">ArtCraw!</p>
+             <div class="art">
+                 <img src="Images/13.jpg" width="100%" alt='cat1'>
+                 <p class='catTitle'>ArtCraw!</p>
+                <p class="postsColor"> 7,276 Posts</p>
              </div>
      
         </div>
     </div>
 
 </div>
+<div id="prod">
+
+</div>
     
 </body>
 </html>
+<script>
+    var myHeaders = new Headers(); 
+    myHeaders.append("Authorization", "Client-ID f8c12722308ea37");
+    var formdata = new FormData(); 
+    var requestOptions = 
+    {
+         method: 'GET', 
+         headers: myHeaders,
+         redirect: 'follow' 
+    };
+    fetch("https://api.imgur.com/3/gallery/top/viral/month/1?showViral=true&mature=true&album_previews=true",requestOptions) 
+    .then(response => response.json())
+    .then(result => console.log(result.data)) .catch(error => console.log('error', error));
+    
+
+    let parent = document.getElementById('prod');
+    function showProd(data)
+    {
+        data.forEach((product)=>{
+            let div= document.createElement('div');
+            let img = document.createElement('img');
+            img.src=product.link;
+            div.append(img);
+            parent.append(div);
+        })
+    }
+</script>

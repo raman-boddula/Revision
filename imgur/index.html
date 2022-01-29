@@ -6,316 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="https://s.imgur.com/images/favicon-32x32.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet'  href="styles.css">
     <title>Imgur : The magic of internet</title>
-    <style>
-        *{
-            padding:0px;
-            margin:0px;
-            box-sizing: border-box;
-        }
-        .coverPage
-        {
-            background:url(https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png);
-            height:500px;
-            position:sticky;
-        }
-        .homeCover{
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            /* background:url(https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png); */
-            /* background-size: cover; */
-            /* background-position: 50%; */
-            padding:1em;
-            position:fixed;
-        }
-       
-        .newPost{
-                text-align: center;
-                height: 35px;
-                display: inline-block;
-                padding: 7px 14px 10px 9px;
-                border-radius: 3px;
-                font-size: 15px;
-                position: relative;
-                background-color: #1bb76e;
-                color: #fff;
-                margin-left:1em;
-                padding-bottom:2em;
-        }
-        .newpost{
-            display: flex;
-        }
-        .searchbar{
-            background: hsla(0,0%,100%,.25);
-            height:1.6em;
-            margin-left: 30%;
-            width: 25%;
-            font-size: 1.5em;
-            border-radius: 0.2em;
-        }
-        .searchbar input :active{
-            border: none;
-        }
-        .searchbar input {
-            background: hsla(0,0%,100%,.25);
-            padding:1em 2em 0.66em 2em;
-            width: 90%;
-            color:white;
-            border:none;
-        }
-        .searchbar i:hover{
-            cursor: pointer;
-        }
-        .searchbar input::placeholder{
-            color:silver;
-            font-size: 1em;
-        }
-        a{
-            text-decoration: none;
-        }
-       .leader{
-           margin-left: 2em;
-       }
-       .leader :hover{
-           cursor: pointer;
-       }
-       .goAddFree{
-           margin-left: 2em;
-       }
-       .goAddFree button{
-               border:none;
-               background: #6432f9;
-               box-shadow: 0 3px 4px rgb(0 0 0 / 12%);
-               padding: 0 10px 0 9px;
-               overflow: hidden;
-               margin: auto 0;
-               line-height: 35px;
-               border-radius: 0.2em;
-               color:white;
-               font-size: 1em;
-               font-weight: bold;
-               margin-left: 6em;
-               margin-right: 2em;
-       }
-       .goAddFree button:hover{
-           cursor: pointer;
-       }
-       .signin button{
-           box-shadow: 0 3px 4px rgb(0 0 0 / 12%);
-           padding: 0 10px 0 9px;
-           overflow: hidden;
-           margin: auto 0;
-           line-height: 35px;
-           border-radius: 0.2em;
-           background-color:inherit;
-           border:none;
-           color:white;
-           font-size: 1em;
-           font-weight: bold;
 
-       }
-       .signin button:hover{
-           cursor: pointer;
-       }
-       .signup button{
-            box-shadow: 0 3px 4px rgb(0 0 0 / 12%);
-            padding: 0 10px 0 9px;
-            overflow: hidden;
-            margin: auto 0;
-            line-height: 35px;
-            border-radius: 0.2em;
-            background-color:inherit;
-            border:none;
-           font-size: 1em;
-           background:#1bb76e;
-           margin-left: 4em;
-           font-weight: bold;
-            color:white;
-       }
-       .signup button:hover{
-           cursor: pointer;
-       }
-       .fontmessage{
-           font-size: 24px;
-           font-family: Proxima Nova ExtraBold,Helvetica Neue,Helvetica,Arial,sans-serif;
-           letter-spacing: .6px;
-           color: #aed8ea;
-           text-align: center;
-           margin-top: 12px;
-           min-height: 34px;
-           position: relative;
-       }
-     
-       .categories{
-          background:inheri;
-           height: 34px;
-           width: 86%;
-           margin-left: 7%;
-           padding:1%;
-       }
-       .exploretags{
-           color:rgb(212, 207, 207);
-           font-size: 1em;
-           
-       }
-       .exploretags:hover{
-           cursor: pointer;
-       }
-       .catGrids{
-           display: flex;
-           justify-content: space-between;
-           margin-top:1em;
-       }
-       .catGrids div{
-           margin-right: 0.5em
-       }
-       .catGrids p{
-        height:50px;
-        font-family: Proxima Nova Bold,Helvetica Neue,Helvetica,Arial,sans-serif;
-        padding: 12px;
-        width: 100%;
-        font-weight: bold;
-        text-align: center;
-        /* color: #fff; */
-       }
-     
-       .hydra
-       {
-        background-color: rgb(64, 112, 181);
-       }
-       .oddly {
-           background-color: rgb(94, 88, 203);
-
-       }
-        .coffe {
-        background-color: rgb(56, 60, 100);;
-        }
-        .staff{
-        background-color: rgb(19, 45, 49);;
-        }
-        .gaming{
-        background-color: rgb(43, 26, 90);
-        }
-        .memes{
-        background-color: rgb(186, 81, 159);
-        }
-        .clean{
-        background-color: rgb(50, 141, 103);
-        }
-        .funny{
-        background-color:rgb(99, 56, 117);
-        }
-        .aww{
-            background-color: rgb(96, 174, 187);
-
-        }
-        .oc{
-        background-color:rgb(171, 128, 184);
-        }
-        .awesome{
-        background-color: rgb(132, 114, 189);
-        }
-        .spicy{
-        background-color: #51535a;
-        }
-        .art{
-        background-color: rgb(255, 81, 186);
-        
-        }
-        .catGrids div{
-            border-radius: 10px;
-        }
-        .catGrids div:hover{
-            transform:translateY(-0.4em);
-            transition: all 0.5s;
-            cursor: pointer;
-        }
-        .tagsExplore{
-            display: grid;
-            grid-template-columns: 50% 50%;
-        }
-        .tagsExplore:hover{
-            cursor: pointer;
-        }
-        .moretags{
-            text-align: right;
-            color:silver;
-            margin-right: 0.5em;
-        }
-        #mDiv{
-            width:100%;
-            background-color:#2e3035 ;
-            display: grid;
-            grid-template-columns: repeat(4,24%);
-            grid-gap:1%;
-        }
-        #prod{
-            width:90%;
-            margin-left: 5%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        #prod div img{
-            border-radius: 10px;
-        }
-        #prod p{
-            text-align: center;
-            color:white;
-        }
-        #prod1 div img{
-        border-radius: 10px;
-        }
-        #prod div:hover{
-            transform:translateY(-0.4em);
-            transition: all 0.5s;
-            cursor: pointer;
-        }
-         #prod1 div:hover{
-            transform:translateY(-0.4em);
-            transition: all 0.5s;
-            cursor: pointer;
-         } 
-         #prod2  div:hover{
-            transform:translateY(-0.4em);
-            transition: all 0.5s;
-            cursor: pointer;
-        }
-         #prod3 div:hover{
-             transform:translateY(-0.4em);
-             transition: all 0.5s;
-             cursor: pointer;
-
-         }
-        #prod1 p{
-        text-align: center;
-        color:white;
-        }
-        #prod2 div img{
-        border-radius: 10px;
-        }
-        #prod2 p{
-        text-align: center;
-        color:white;
-        }
-        #prod3 div img{
-        border-radius: 10px;
-        }
-        #prod3 p{
-        text-align: center;
-        color:white;
-        }
-        .postsColor{
-            color:rgb(88, 86, 86);
-        }
-        .catTitle{
-            color:white;
-        }
-        .imgGif{
-            width:100%
-        }
-    </style>
 </head>
 <body>
     <div class="coverPage">
@@ -351,8 +44,8 @@
                </div> 
             </a>
             <div class="searchbar">
-                <input type="text" placeholder="Images ,#tags ,@users oh my!"/>
-                <i class="fa fa-search"></i>
+                <input type="text" id='search' placeholder="Images ,#tags ,@users oh my!"/>
+                <i id="btnSearch" class="fa fa-search"></i>
             </div>
             <div class="leader">
                 <svg width="32" height="32" viewBox="0 -2 34 34" class="uScaleTransition ProfileNavbar-item" fill="none"
@@ -476,6 +169,9 @@
     </div>
 
 </div>
+<div id="ParentSearch">
+
+</div>
 <div id="mDiv">
 
     <div id="prod">
@@ -490,75 +186,15 @@
         <div id="prod3">
 
         </div>
+                <div id="prod4">
+
+                </div>
+                <div id="prod5">
+
+                </div>
 </div>
     
 </body>
 </html>
-<script>
-    var myHeaders = new Headers(); 
-    myHeaders.append("Authorization", "Client-ID f8c12722308ea37");
-    var formdata = new FormData(); 
-    var requestOptions = 
-    {
-         method: 'GET', 
-         headers: myHeaders,
-         redirect: 'follow' 
-    };
-    fetch("https://api.imgur.com/3/gallery/top/viral/month/1?showViral=true&mature=true&album_previews=true",requestOptions) 
-    .then(response => response.json())
-    .then(result => showProd(result.data)) .catch(error => console.log('error', error));
-    
-
-    let parent = document.getElementById('prod');
-    let parent1 = document.getElementById('prod1');
-    let parent2 = document.getElementById('prod2');
-    let parent3 = document.getElementById('prod3');
-    function showProd(data)
-    {
-        console.log("data",data)
-        let data1=data.slice(0,15);
-        let data2=data.slice(15,30);
-        let data3=data.slice(30,45);
-        let data4=data.slice(45,60);
-        data1.forEach((product)=>{
-            let div= document.createElement('div');
-            let img = document.createElement('img');
-            img.setAttribute('class','imgGif')
-            img.src=product.link;
-            let titl=document.createElement('p');
-            titl.textContent=product.title;
-            div.append(img,titl);
-            parent.append(div);
-        })
-        data2.forEach((product)=>{
-        let div= document.createElement('div');
-        let img = document.createElement('img');
-        img.setAttribute('class','imgGif')
-        img.src=product.link;
-        let titl=document.createElement('p');
-        titl.textContent=product.title;
-        div.append(img,titl);
-        parent1.append(div);
-        })
-        data3.forEach((product)=>{
-        let div= document.createElement('div');
-        let img = document.createElement('img');
-        img.setAttribute('class','imgGif')
-        img.src=product.link;
-        let titl=document.createElement('p');
-        titl.textContent=product.title;
-        div.append(img,titl);
-        parent2.append(div);
-        })
-        data4.forEach((product)=>{
-        let div= document.createElement('div');
-        let img = document.createElement('img');
-        img.setAttribute('class','imgGif')
-        img.src=product.link;
-        let titl=document.createElement('p');
-        titl.textContent=product.title;
-        div.append(img,titl);
-        parent3.append(div);
-        })
-    }
+<script type="text/javascript" src="../scripts//index.js">
 </script>

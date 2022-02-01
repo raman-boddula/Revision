@@ -11,9 +11,11 @@
 </head>
 
 <body>
-    <input type="text" id="query" placeholder="Search........!" />
-    <button id='get'>Get</button>
+    <input type="text" id="query" oninput="debounce(searchData,3000)" placeholder="Search........!" />
+    <div id="searchDiv"></div>
+    <!-- <button id='get'>Get</button> -->
     <div id="prod"></div>
+    <div id="searchResults"></div>
     <button id="scroll" onclick="scrollTooo()"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
 </body>
 

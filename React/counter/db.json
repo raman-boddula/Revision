@@ -1,0 +1,49 @@
+{
+  "Todos": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "status": true
+    },
+    {
+      "id": 2,
+      "title": "React.js",
+      "status": true
+    },
+    {
+      "id": 3,
+      "title": "Redux",
+      "status": true
+    },
+    {
+      "id": 4,
+      "title": "MERN",
+      "status": false
+    },
+    {
+      "id": 5,
+      "title": "JavaScript",
+      "status": false
+    },
+    {
+      "id": 6,
+      "title": "DSA",
+      "status": false
+    },
+    {
+      "id": 7,
+      "title": "Express.js",
+      "status": true
+    },
+    {
+      "title": "Learn classes",
+      "status": false,
+      "id": 8
+    },
+    {
+      "title": "Learn react",
+      "status": false,
+      "id": 9
+    }
+  ]
+}

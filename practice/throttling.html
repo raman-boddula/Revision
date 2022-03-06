@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="throttle(event)">Throttle</button>
+    <input oninput="debounce(event)" type="text" placeholder="search here debounce" />
+</body>
+
+</html>
+<script>
+    const throttleFun = (fn, delay) => {
+        let last = 0;
+        return (...args) => {
+            let now = new Date().getTime();
+            if (now - last < delay) {
+                return;
+            }
+            last = now;
+            return fn(...args)
+        }
+    }
+    const throttle = (throttleFun(() => {
+        console.log("throttle function")
+    }, 5000));
+
+    const debounceFunc = (fn, delay) => {
+        let timer;
+        return (...args) => {
+            if (timer) clearInterval(timer);
+            timer = setTimeout(() => {
+                fn(...args);
+            }, delay);
+        }
+    }
+    const debounce = (debounceFunc((e) => {
+        console.log(e.target.value)
+    }, 1000))
+</script>

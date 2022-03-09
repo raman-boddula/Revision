@@ -65,9 +65,7 @@ function showProd(data) {
 let i = 2;
 window.addEventListener("scroll", () => {
   if (
-    window.scrollY + window.innerHeight >=
-    document.documentElement.scrollHeight
-  ) {
+window.scrollY + window.innerHeight >=document.documentElement.scrollHeight) {
     if (parent) {
       getData(i++);
     } else {

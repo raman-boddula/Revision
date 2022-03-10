@@ -13,13 +13,24 @@
   }
 }
 
-.mDiv::-webkit-scrollbar{
-    width: 0%;
-  }
+.mDiv::-webkit-scrollbar {
+  width: 0%;
+}
 
 .prodDiv img {
+  padding: 1em;
   width: 400px;
   height: 300px;
+}
+
+.prodDiv {
+  box-shadow: 1px 1px 5px 2px gray;
+}
+
+.prodDiv>img:hover {
+  transform: scale(1.10);
+  transition: transform 1.2s;
+  cursor: pointer;
 }
 
 .App-header {

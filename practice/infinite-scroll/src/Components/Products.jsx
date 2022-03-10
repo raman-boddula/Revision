@@ -4,8 +4,10 @@ import {AiOutlineCaretUp} from "react-icons/ai"
 export const Products = () => {
     const [data, setData] = React.useState([]);
     const [page, setPage] = React.useState(1);
+    const [loading, setLoading] = React.useState(false);
     const divRef = React.useRef();
     React.useEffect(() => {
+        setLoading(true);
         getData();
     }, [page]);
     function getData() {
@@ -21,8 +23,10 @@ export const Products = () => {
         )
             .then((response) => response.json())
             .then((response) => {
+                setLoading(false)
                 setData([...data, ...response.photos]);
                 console.log(response)
+
             });
     }
     const handleScroll = () => {
@@ -32,12 +36,12 @@ export const Products = () => {
     }
     const scrollUp = () => {
         console.log('here')
-        divRef.current.scrollTop=0
+        divRef.current.scrollTop = 0;
     }
     return (
         <div>
-            <h1>    Products page</h1>
-            <div ref={divRef} className="mDiv" onScroll={handleScroll} style={{display:"grid",gridTemplateColumns:"repeat(4,24%)",height:"88vh",overflowY:'scroll'}}>
+            <h1> Infinite Scroll</h1>
+            <div ref={divRef} className="mDiv" onScroll={handleScroll} style={{ display: "grid", gridTemplateColumns: "repeat(4,24%)", height: "88vh", overflowY: 'scroll', gridGap: '1%' }}>
                 {
                     data.map((item) => {
                         return (<div key={item.src.large2x} className="prodDiv">
@@ -46,6 +50,7 @@ export const Products = () => {
                         </div>)
                     })
                 }</div>
+            { loading? <h1 style={{position: 'relative',bottom:"20px"}}>Loading...</h1>:null}
             <div style={{ position: "fixed", bottom: "50px", right: '50px' }}><AiOutlineCaretUp onClick={scrollUp} style={{width: "50px", height:"50px"}}></AiOutlineCaretUp></div>
         </div>
     )

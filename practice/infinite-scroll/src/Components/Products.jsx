@@ -44,7 +44,7 @@ export const Products = () => {
     return (
         <div>
             <h1> Infinite Scroll</h1>
-            <div ref={divRef} className="mDiv"  onScroll={handleScroll} style={{ display: "grid", gridTemplateColumns: "repeat(4,24%)", height: "88vh", overflowY: 'scroll', gridGap: '1%' }}>
+            <div ref={divRef} className="mDiv"  onScroll={handleScroll} style={{ display: "flex",flexDirection: "column", height: "88vh", overflowY: 'scroll'}}>
                 {
                     data.map((item) => {
                         return (<div key={item.src.large2x} className="prodDiv">

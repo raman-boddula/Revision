@@ -19,20 +19,17 @@
 
 .prodDiv img {
   padding: 1em;
-  width: 25em;
+  width: 40em;
   height: 30em;
 }
 
-.prodDiv {
-  box-shadow: 1px 1px 5px 2px gray;
-}
 
 .prodDiv {
   scroll-behavior: smooth;
 }
 
 .prodDiv>img:hover {
-  transform: scale(1.02);
+  transform: scale(1.10);
   transition: transform 1.2s;
   cursor: pointer;
 }

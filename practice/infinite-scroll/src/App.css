@@ -49,6 +49,15 @@
   color: #61dafb;
 }
 
+@media screen and (max-width:420px) {
+  .prodDiv img {
+    padding: 1em;
+    width: 20em;
+    height: 25em;
+  }
+
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

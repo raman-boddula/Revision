@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import {AiOutlineCaretUp} from "react-icons/ai"
-
+import { Link } from 'react-router-dom';
 export const Products = () => {
     const [data, setData] = React.useState([]);
     const [page, setPage] = React.useState(1);
@@ -35,13 +35,16 @@ export const Products = () => {
          }
     }
     const scrollUp = () => {
-        console.log('here')
-        divRef.current.scrollTop = 0;
-    }
+        divRef.current.scrollTo(
+            {
+                top: 0,
+                behavior: "smooth"
+            });
+    }; 
     return (
         <div>
             <h1> Infinite Scroll</h1>
-            <div ref={divRef} className="mDiv" onScroll={handleScroll} style={{ display: "grid", gridTemplateColumns: "repeat(4,24%)", height: "88vh", overflowY: 'scroll', gridGap: '1%' }}>
+            <div ref={divRef} className="mDiv"  onScroll={handleScroll} style={{ display: "grid", gridTemplateColumns: "repeat(4,24%)", height: "88vh", overflowY: 'scroll', gridGap: '1%' }}>
                 {
                     data.map((item) => {
                         return (<div key={item.src.large2x} className="prodDiv">
@@ -51,7 +54,8 @@ export const Products = () => {
                     })
                 }</div>
             { loading? <h1 style={{position: 'relative',bottom:"20px"}}>Loading...</h1>:null}
-            <div style={{ position: "fixed", bottom: "50px", right: '50px' }}><AiOutlineCaretUp onClick={scrollUp} style={{width: "50px", height:"50px"}}></AiOutlineCaretUp></div>
+            <div style={{ position: "fixed", bottom: "50px", right: '50px' ,cursor:"pointer" }}><AiOutlineCaretUp onClick={scrollUp} style={{ width: "50px", height: "50px" }}></AiOutlineCaretUp>
+            </div>
         </div>
     )
 }

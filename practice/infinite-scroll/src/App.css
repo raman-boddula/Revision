@@ -19,8 +19,8 @@
 
 .prodDiv img {
   padding: 1em;
-  width: 400px;
-  height: 300px;
+  width: 25em;
+  height: 30em;
 }
 
 .prodDiv {
@@ -32,7 +32,7 @@
 }
 
 .prodDiv>img:hover {
-  transform: scale(1.10);
+  transform: scale(1.02);
   transition: transform 1.2s;
   cursor: pointer;
 }
